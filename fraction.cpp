@@ -1,4 +1,4 @@
-/////
+///////
 
 #include <iostream>
 #include <iomanip>
@@ -7,10 +7,10 @@
 using namespace std;
 
 
-int main(int argc, char** argv)
+int main(int argc, const char* argv[])
 {
-
-    fraction a(1, 2);
+    
+    fraction a(1.0 / 2);
     fraction b(3, 2);
     fraction c(0, 1);
 
@@ -18,14 +18,31 @@ int main(int argc, char** argv)
     double v = 1.0 / 2;
 
 
-    cout << a / x << endl;
+    cout << a << endl;
+    cout << "a * b = " << a / (1.0/3) << endl << endl;
     cout << (a / x).to_double() << endl;
-    cout << boolalpha << bool(a == b) << endl;
-    cout << boolalpha << bool(a == 1) << endl;
-    cout << boolalpha << bool(a == 0) << endl;
-    cout << boolalpha << !bool(a == v) << endl;
+    
 
     
+    fraction w;
+
+    cout << "digite uma fracao:  ";
+    cin >> w;
+
+    cout << "\n\n\n" << w << endl;
+
+    cout << w + 1 << endl;
+
+    cout << w - 2 << endl;
     
- 
+
+    fraction a1("1/2"), b2("70/3");
+
+    cout << "(" << b << ") => " << ~b << endl;
+    cout << "(" << b << ") + " << ~b << " = " << b + ~b << endl;
+
+    cout << "!a = " << !a << endl;
+    cout << boolalpha << bool(1 == EXIT_FAILURE) << endl;
+
+    v++;
 }
